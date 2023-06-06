@@ -3,6 +3,7 @@ import Header from './Header/Header'
 import CreateTaskForm from './CreateTaskForm/CreateTaskForm'
 import TaskList from './TaskList/TaskList'
 import FilterTasksForm from './FilterTasksForm/FilterTasksForm'
+import EmptyPlaceholder from './Shared/EmptyPlaceholder/EmptyPlaceholder'
 
 import '../utils/styles/colors.scss'
 import '../utils/styles/classes.scss'
@@ -21,9 +22,7 @@ const App: React.FC = observer(() => {
       {taskStore.tasks.length ? (
         <TaskList />
       ) : (
-        <p className='app__empty-placeholder text-1'>
-          The list is empty! Try to add a new task
-        </p>
+        <EmptyPlaceholder text='The list is empty! Try to add a new task' />
       )}
     </div>
   )
