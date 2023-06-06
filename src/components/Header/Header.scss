@@ -1,0 +1,36 @@
+.header {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+
+  .header__title {
+    color: var(--main-color-1);
+  }
+
+  .header__task-counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .header__icon {
+      width: 24px;
+      height: 24px;
+      fill: var(--text-color);
+    }
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    gap: 10px;
+    .header__title {
+      text-align: center;
+      width: 100%;
+      font-size: 24px;
+    }
+
+    .header__task-counter {
+      margin: 0 auto;
+    }
+  }
+}

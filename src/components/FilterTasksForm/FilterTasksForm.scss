@@ -1,0 +1,64 @@
+.filter-tasks-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 16px;
+
+  .filter-tasks-form__label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .filter-tasks-form__input-select-wrapper {
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      .filter-tasks-form__input-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        .filter-tasks-form__input {
+          box-sizing: border-box;
+          width: 100%;
+          border: 1px solid var(--border-color);
+          outline: none;
+          padding: 10px;
+          &::placeholder {
+            opacity: 0.4;
+          }
+        }
+        .filter-tasks-form__clear-button {
+          position: absolute;
+          right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: none;
+          border: none;
+          cursor: pointer;
+          height: 100%;
+          width: 40px;
+
+          .filter-tasks-form__clear-icon {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .filter-tasks-form__label {
+      .filter-tasks-form__input-select-wrapper {
+        flex-direction: column;
+        .filter-tasks-form__select {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

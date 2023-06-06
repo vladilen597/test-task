@@ -1,0 +1,25 @@
+.app {
+  .app__splitter {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    opacity: 0.3;
+  }
+
+  .create-task-form {
+    margin-top: 40px;
+  }
+
+  .filter-tasks-form {
+    margin-top: 20px;
+  }
+
+  .task-list {
+    margin-top: 20px;
+  }
+
+  .app__empty-placeholder {
+    margin-top: 12px;
+    text-align: center;
+    opacity: 0.5;
+  }
+}

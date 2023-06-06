@@ -1,0 +1,19 @@
+$green: #5cb85c;
+$red: #e53935;
+$grey: #6c5b7c;
+$white: #fff;
+$pastelle-orange: #f67280;
+$light-orange: #f8b595;
+$blind-purple: #c06c84;
+
+$grey-transparent-1: rgba($grey, 0.4);
+
+:root {
+  --main-color-1: #{$pastelle-orange};
+  --text-color: #{$grey};
+  --text-color-light: #{$white};
+  --background-color: #{$light-orange};
+  --success-color: #{$green};
+  --warning-color: #{$red};
+  --border-color: #{$grey-transparent-1};
+}
