@@ -9,13 +9,7 @@ import '../utils/styles/classes.scss'
 import './App.scss'
 
 import taskStore from '../store/taskStore/taskStore'
-import { injectStores } from '@mobx-devtools/tools'
 import { observer } from 'mobx-react'
-
-// Remove after debugging
-injectStores({
-  taskStore,
-})
 
 const App: React.FC = observer(() => {
   return (

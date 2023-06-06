@@ -13,13 +13,13 @@ const SelectStatusFilter: React.FC = observer(() => {
       name='filter-list'
       className='select-status-filter text-1'
     >
-      <option className='select-status-filter__select-option' value='all'>
+      <option className='filter-tasks-form__select-option' value='all'>
         All
       </option>
-      <option className='select-status-filter__select-option' value='done'>
+      <option className='filter-tasks-form__select-option' value='done'>
         Completed
       </option>
-      <option className='select-status-filter__select-option' value='active'>
+      <option className='filter-tasks-form__select-option' value='active'>
         Active
       </option>
     </select>
