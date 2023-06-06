@@ -10,7 +10,12 @@ import './Header.scss'
 const Header: React.FC = observer(() => {
   return (
     <header className='header'>
-      <h1 className='header__title h1-title'>TaskManager</h1>
+      <span className='header__text-wrapper'>
+        <h1 className='header__title h1-title'>TaskManager</h1>
+        <span className='header__drag-description label-2'>
+          You can also drag 'n' drop tasks!
+        </span>
+      </span>
       <div className='header__task-counter'>
         <TaskList className='header__icon' title='Amount of all tasks' />
         <span className='text-1'>
