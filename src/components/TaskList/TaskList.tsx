@@ -8,7 +8,7 @@ import { ITask } from '../../store/taskStore/types'
 import './TaskList.scss'
 
 const TaskList: React.FC = observer(() => {
-  const [currentDraggedTask, setCurrentDraggedTask] = useState<ITask | any>({})
+  const [currentDraggedTask, setCurrentDraggedTask] = useState<ITask>({})
 
   // Comparing parts of the task names
   const filteredListByName: ITask[] = taskStore.tasks.filter((task) =>
