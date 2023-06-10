@@ -8,7 +8,7 @@ import { ITask } from '../../store/taskStore/types'
 import './TaskList.scss'
 
 const TaskList: React.FC = observer(() => {
-  const [currentDraggedTask, setCurrentDraggedTask] = useState<ITask | {}>({})
+  const [currentDraggedTask, setCurrentDraggedTask] = useState<ITask | any>({})
 
   // Comparing parts of the task names
   const filteredListByName: ITask[] = taskStore.tasks.filter((task) =>
@@ -40,11 +40,11 @@ const TaskList: React.FC = observer(() => {
 
   // Handler for tasks that dragged task is hovered over, painting it grey
   const handleDragOver = (
-    event: React.DragEvent<HTMLLIElement>,
-    order: number
+    task: ITask,
+    event: React.DragEvent<HTMLLIElement>
   ) => {
     event.preventDefault()
-    if (order !== currentDraggedTask) {
+    if (task.orderNumber !== currentDraggedTask.orderNumber) {
       ;(event.target as HTMLLIElement).classList.add('task--over')
     }
   }
@@ -78,7 +78,9 @@ const TaskList: React.FC = observer(() => {
         <Task
           handleDragStart={() => handleDragStart(task)}
           handleDragEnd={handleDragEnd}
-          handleDragOver={handleDragOver}
+          handleDragOver={(event: React.DragEvent<HTMLLIElement>) =>
+            handleDragOver(task, event)
+          }
           handleDragLeave={handleDragLeave}
           handleDropTask={(event: React.DragEvent<HTMLLIElement>) =>
             handleDropTask(task, event)

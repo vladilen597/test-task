@@ -9,11 +9,11 @@ export interface ITask {
 export interface ITaskStore {
   tasks: ITask[]
   filterQuery: { title: string; status: string }
-  addTask: Function
-  removeTask: Function
-  toggleCompleteTask: Function
-  setFilterQuery: Function
-  changeFilterStatus: Function
-  clearFilterQuery: Function
-  changeTasksOrder: Function
+  addTask: (taskName: string) => void
+  removeTask: (id: string) => void
+  toggleCompleteTask: (id: string) => void
+  setFilterQuery: (id: string) => void
+  changeFilterStatus: (status: string) => void
+  clearFilterQuery: () => void
+  changeTasksOrder: (firstTask: ITask, secondTask: ITask) => void
 }

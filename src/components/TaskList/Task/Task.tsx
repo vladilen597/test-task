@@ -12,11 +12,11 @@ interface ITaskProps {
   isDone: boolean
   doneTime: Date | null
   order: number
-  handleDragStart: Function
-  handleDragEnd: Function
-  handleDragOver: Function
-  handleDragLeave: Function
-  handleDropTask: Function
+  handleDragStart: () => void
+  handleDragEnd: (event: React.DragEvent<HTMLLIElement>) => void
+  handleDragOver: (event: React.DragEvent<HTMLLIElement>) => void
+  handleDragLeave: (event: React.DragEvent<HTMLLIElement>) => void
+  handleDropTask: (event: React.DragEvent<HTMLLIElement>) => void
 }
 
 const Task: React.FC<ITaskProps> = ({
